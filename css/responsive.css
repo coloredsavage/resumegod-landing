@@ -65,6 +65,39 @@
         padding: 80px 0 40px;
     }
     
+    /* Electric button mobile fixes */
+    .electric-button-container {
+        margin: 20px auto;
+        transform: scale(0.9);
+    }
+    
+    .electric-main-button {
+        width: 200px;
+        height: 60px;
+    }
+    
+    .electric-button-text {
+        font-size: 16px;
+    }
+    
+    /* Ensure electric effects work on mobile */
+    .electric-border-distort {
+        filter: url(#turbulent-displace);
+    }
+    
+    .electric-main-button::before,
+    .electric-main-button::after {
+        animation-play-state: running;
+    }
+    
+    .electric-glow-layer-1,
+    .electric-glow-layer-2,
+    .electric-overlay-1,
+    .electric-overlay-2,
+    .electric-background-glow {
+        opacity: 0.8; /* Increase opacity for better visibility on mobile */
+    }
+    
 }
 
 @media (max-width: 480px) {
@@ -114,6 +147,28 @@
     .copyright {
         margin-top: 30px;
         font-size: 12px;
+    }
+    
+    /* Electric button mobile fixes for smaller screens */
+    .electric-button-container {
+        transform: scale(0.85);
+    }
+    
+    .electric-main-button {
+        width: 180px;
+        height: 55px;
+    }
+    
+    .electric-button-text {
+        font-size: 15px;
+    }
+    
+    .electric-glow-layer-1,
+    .electric-glow-layer-2,
+    .electric-overlay-1,
+    .electric-overlay-2,
+    .electric-background-glow {
+        opacity: 0.9; /* Further increase opacity for smaller screens */
     }
 }
 
@@ -177,5 +232,27 @@
     
     .feature-card p {
         font-size: 12px;
+    }
+    
+    /* Electric button mobile fixes for smallest screens */
+    .electric-button-container {
+        transform: scale(0.8);
+    }
+    
+    .electric-main-button {
+        width: 160px;
+        height: 50px;
+    }
+    
+    .electric-button-text {
+        font-size: 14px;
+    }
+    
+    .electric-glow-layer-1,
+    .electric-glow-layer-2,
+    .electric-overlay-1,
+    .electric-overlay-2,
+    .electric-background-glow {
+        opacity: 1; /* Maximum opacity for smallest screens */
     }
 }
