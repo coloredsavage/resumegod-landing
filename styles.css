@@ -1,0 +1,541 @@
+/* SF Pro Font Faces */
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('font/SF-Pro-Display-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('font/SF-Pro-Display-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('font/SF-Pro-Display-Semibold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('font/SF-Pro-Display-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('font/SF-Pro-Display-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica', Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(24px, 7vw, 84px);
+}
+
+/* Navigation */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 1000;
+    padding: clamp(16px, 1.5vw, 20px) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: clamp(18px, 1.5vw, 20px);
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.btn-launch {
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: clamp(8px, 0.75vw, 10px) clamp(20px, 1.8vw, 24px);
+    border-radius: 24px;
+    font-size: clamp(12px, 0.98vw, 13px);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-launch:hover {
+    background: rgba(255, 255, 255, 0.92);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Hero Section - YOUR EXACT SETTINGS */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 0px;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: clamp(500px, 52vw, 650px);
+    margin-top: -250px; /* YOUR EXACT SETTING */
+}
+
+.hero-title {
+    font-size: clamp(40px, 6.5vw, 86px);
+    font-weight: 300;
+    line-height: 1.05;
+    margin-bottom: clamp(20px, 2vw, 28px);
+    letter-spacing: -0.03em;
+}
+
+.hero-subtitle {
+    font-size: clamp(15px, 1.3vw, 17px);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: clamp(32px, 3.5vw, 44px);
+    max-width: clamp(400px, 42vw, 540px);
+    font-weight: 400;
+}
+
+.hero-light-effect {
+    position: absolute;
+    right: -25%; /* YOUR EXACT SETTING */
+    top: 67%; /* YOUR EXACT SETTING */
+    transform: translateY(-50%);
+    width: clamp(1200px, 120vw, 1700px);
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.light-streak-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    opacity: 1;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: clamp(12px, 1.05vw, 14px) clamp(28px, 2.6vw, 34px);
+    border-radius: 24px;
+    font-size: clamp(13px, 1.05vw, 14px);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: -0.01em;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Trending Section */
+.trending-section {
+    padding: clamp(80px, 10vw, 140px) 0 clamp(80px, 10vw, 140px);
+    text-align: center;
+    position: relative;
+    z-index: 3;
+}
+
+.section-title {
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 600;
+    margin-bottom: clamp(14px, 1.4vw, 18px);
+    letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+    font-size: clamp(14px, 1.2vw, 16px);
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: clamp(28px, 3vw, 36px);
+    max-width: clamp(500px, 54vw, 700px);
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+}
+
+.video-container {
+    margin-top: clamp(48px, 5vw, 64px);
+    max-width: clamp(700px, 70vw, 950px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-placeholder {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: clamp(12px, 1.2vw, 16px);
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    transition: all 0.3s ease;
+}
+
+.video-placeholder:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.play-icon {
+    font-size: clamp(40px, 4vw, 52px);
+    opacity: 0.5;
+}
+
+.placeholder-note {
+    font-size: clamp(13px, 1.05vw, 14px);
+    color: rgba(255, 255, 255, 0.35);
+}
+
+/* Features Section */
+.features-section {
+    padding: clamp(60px, 7vw, 100px) 0 clamp(100px, 12vw, 160px);
+    position: relative;
+    z-index: 3;
+}
+
+.features-title {
+    font-size: clamp(36px, 4.5vw, 58px);
+    font-weight: 300;
+    text-align: left;
+    margin-bottom: clamp(60px, 7vw, 90px);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    padding-bottom: clamp(24px, 2.6vw, 34px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.text-gray {
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 300;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 50%, #45b7d1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 400;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(40px, 4.5vw, 60px) clamp(48px, 5.5vw, 72px);
+}
+
+.feature-card {
+    padding: 0;
+    background: transparent;
+    border: none;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+}
+
+.feature-icon {
+    font-size: clamp(36px, 3.5vw, 44px);
+    margin-bottom: clamp(16px, 1.6vw, 22px);
+    color: #fff;
+    display: block;
+}
+
+.feature-card h3 {
+    font-size: clamp(17px, 1.5vw, 20px);
+    font-weight: 600;
+    margin-bottom: clamp(12px, 1.2vw, 16px);
+    letter-spacing: -0.01em;
+    color: #fff;
+}
+
+.feature-card p {
+    font-size: clamp(13px, 1.1vw, 15px);
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.55);
+    font-weight: 400;
+}
+
+/* CTA Section */
+.cta-section {
+    position: relative;
+    padding: clamp(140px, 16vw, 220px) 0 clamp(80px, 19vw, 200px);
+    text-align: center;
+    overflow: hidden;
+}
+
+.cta-footer-img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0;
+    bottom: clamp(-80px, -9vw, -120px);
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+.btn-cta {
+    background: #000;
+    color: #fff;
+    border: clamp(2px, 0.2vw, 3px) solid #ff4444;
+    padding: clamp(18px, 1.8vw, 24px) clamp(56px, 6.5vw, 86px);
+    border-radius: 60px;
+    font-size: clamp(17px, 1.7vw, 22px);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 clamp(32px, 3.5vw, 46px) rgba(255, 68, 68, 0.35);
+    letter-spacing: -0.01em;
+}
+
+.btn-cta:hover {
+    background: rgba(255, 68, 68, 0.08);
+    border-color: #ff5555;
+    box-shadow: 0 0 clamp(50px, 5vw, 70px) rgba(255, 68, 68, 0.5);
+    transform: scale(1.03);
+}
+
+/* Footer */
+.footer {
+    padding: clamp(32px, 3.5vw, 48px) 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    z-index: 3;
+}
+
+.footer p {
+    font-size: clamp(12px, 1.05vw, 14px);
+    color: rgba(255, 255, 255, 0.35);
+    font-weight: 400;
+}
+
+/* Responsive Breakpoints - Scaling from your perfect 14" M1 Pro settings */
+@media (max-width: 1440px) {
+    /* Large desktop - slight adjustment from your perfect settings */
+    .hero-light-effect {
+        right: -28%;
+        top: 68%;
+    }
+}
+
+@media (max-width: 1280px) {
+    /* Standard desktop */
+    .hero-light-effect {
+        right: -32%;
+        top: 69%;
+    }
+}
+
+@media (max-width: 1024px) {
+    /* Small desktop / Tablet landscape */
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: clamp(36px, 4vw, 48px) clamp(40px, 5vw, 56px);
+    }
+    
+    .features-title {
+        text-align: center;
+    }
+    
+    .hero-light-effect {
+        right: -38%;
+        top: 70%;
+        width: clamp(1000px, 130vw, 1600px);
+    }
+       .cta-section {
+        padding: clamp(120px, 14vw, 180px) 0 clamp(70px, 16vw, 160px);
+    }
+}
+
+@media (max-width: 900px) {
+    /* Tablet */
+    .hero-light-effect {
+        right: -45%;
+        top: 65%;
+        width: clamp(900px, 140vw, 1500px);
+    }
+}
+
+@media (max-width: 768px) {
+    /* Tablet portrait / Large mobile */
+    .hero {
+        min-height: auto;
+        padding: clamp(120px, 15vw, 160px) 0 clamp(60px, 10vw, 80px);
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+        margin-top: -250px; /* KEEPING YOUR EXACT SETTING */
+    }
+
+    .hero-light-effect {
+        right: -55%;
+        top: 60%;
+        width: 200vw;
+    }
+
+    .hero-title {
+        font-size: clamp(36px, 10vw, 48px);
+    }
+
+    .hero-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: clamp(14px, 3.5vw, 16px);
+    }
+
+     .cta-section {
+        padding: clamp(100px, 12vw, 140px) 0 clamp(60px, 14vw, 120px);
+    }
+
+    .features-title {
+        text-align: center;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: clamp(48px, 8vw, 60px);
+    }
+    
+    .feature-card {
+        text-align: center;
+    }
+
+    .trending-section,
+    .features-section {
+        padding: clamp(60px, 12vw, 100px) 0;
+    }
+
+
+    .btn-cta {
+        padding: clamp(16px, 4vw, 20px) clamp(44px, 10vw, 60px);
+        font-size: clamp(16px, 4vw, 19px);
+    }
+}
+
+@media (max-width: 640px) {
+    /* Mobile landscape */
+    .hero-light-effect {
+        right: -65%;
+        top: 55%;
+        width: 240vw;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Mobile portrait */
+    .hero-light-effect {
+        right: -75%;
+        top: 50%;
+        width: 280vw;
+    }
+    
+    .hero-title {
+        font-size: clamp(32px, 12vw, 40px);
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(14px, 4vw, 16px);
+    }
+    
+    .section-title {
+        font-size: clamp(28px, 8vw, 36px);
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 280px;
+    }
+       .cta-section {
+        padding: clamp(80px, 10vw, 100px) 0 clamp(50px, 12vw, 80px);
+    }
+}
+
+@media (max-width: 375px) {
+    /* Small mobile */
+    .hero-light-effect {
+        display: none;
+    }
+
+        .cta-section {
+        padding: clamp(60px, 8vw, 80px) 0 clamp(40px, 10vw, 60px);
+    }
+}
+
+/* Extra large screens */
+@media (min-width: 1920px) {
+    /* 4K and large displays */
+    .hero-light-effect {
+        right: -20%;
+        top: 66%;
+        width: clamp(1400px, 110vw, 2000px);
+    }
+}
+
+@media (min-width: 2560px) {
+    /* Ultra-wide and 5K displays */
+    .hero-light-effect {
+        right: -15%;
+        top: 65%;
+        width: clamp(1600px, 100vw, 2400px);
+    }
+}
