@@ -44,14 +44,26 @@ module.exports = async (req, res) => {
     };
 
     // 1. Store in Supabase
-    const { data: supabaseData, error: supabaseError } = await supabase
-      .from('beta_signups')
-      .insert([signupData])
-      .select();
+    let supabaseData = null;
+    let supabaseError = null;
+    
+    try {
+      const result = await supabase
+        .from('beta_signups')
+        .insert([signupData])
+        .select();
+
+      supabaseData = result.data;
+      supabaseError = result.error;
+    } catch (dbError) {
+      console.error('Database connection error:', dbError);
+      // Continue with email even if database fails
+    }
 
     if (supabaseError) {
       console.error('Supabase error:', supabaseError);
-      throw new Error(`Failed to store in database: ${supabaseError.message}`);
+      // Don't fail the entire request if database fails
+      // Just log the error and continue with email
     }
 
     // 2. Send email via Resend
