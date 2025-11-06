@@ -48,6 +48,7 @@ module.exports = async (req, res) => {
     let supabaseError = null;
     
     try {
+      console.log('Attempting to connect to Supabase...');
       const result = await supabase
         .from('beta_signups')
         .insert([signupData])
@@ -55,15 +56,16 @@ module.exports = async (req, res) => {
 
       supabaseData = result.data;
       supabaseError = result.error;
+      
+      if (supabaseError) {
+        console.error('Supabase insert error:', supabaseError);
+        console.error('Error details:', JSON.stringify(supabaseError, null, 2));
+      } else {
+        console.log('Supabase insert successful:', supabaseData);
+      }
     } catch (dbError) {
       console.error('Database connection error:', dbError);
-      // Continue with email even if database fails
-    }
-
-    if (supabaseError) {
-      console.error('Supabase error:', supabaseError);
-      // Don't fail the entire request if database fails
-      // Just log the error and continue with email
+      console.error('Database error details:', JSON.stringify(dbError, null, 2));
     }
 
     // 2. Send email via Resend
@@ -114,7 +116,7 @@ module.exports = async (req, res) => {
       success: true,
       message: 'Successfully signed up for beta!',
       data: {
-        supabase_id: supabaseData[0]?.id,
+        supabase_id: supabaseData && supabaseData[0] ? supabaseData[0].id : null,
         email_sent: !!emailResult.data?.id
       }
     });
