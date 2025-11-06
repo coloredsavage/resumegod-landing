@@ -4,35 +4,35 @@
 /* SF Pro Font Faces */
 @font-face {
     font-family: 'SF Pro Display';
-    src: url('../font/SF-Pro-Display-Regular.otf') format('opentype');
+    src: url('../font2/SF-Pro-Display-Regular.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'SF Pro Display';
-    src: url('../font/SF-Pro-Display-Medium.otf') format('opentype');
+    src: url('../font2/SF-Pro-Display-Medium.otf') format('opentype');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'SF Pro Display';
-    src: url('../font/SF-Pro-Display-Semibold.otf') format('opentype');
+    src: url('../font2/SF-Pro-Display-Semibold.otf') format('opentype');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'SF Pro Display';
-    src: url('../font/SF-Pro-Display-Bold.otf') format('opentype');
+    src: url('../font2/SF-Pro-Display-Bold.otf') format('opentype');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'SF Pro Display';
-    src: url('../font/SF-Pro-Display-Light.otf') format('opentype');
+    src: url('../font2/SF-Pro-Display-Light.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
 }

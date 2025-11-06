@@ -3,7 +3,6 @@
 
 const { createClient } = require('@supabase/supabase-js');
 const { Resend } = require('resend');
-const { Octokit } = require('@octokit/rest');
 
 // Initialize services
 const supabase = createClient(
@@ -12,10 +11,6 @@ const supabase = createClient(
 );
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-
-const octokit = new Octokit({
-  auth: process.env.GITHUB_TOKEN
-});
 
 module.exports = async (req, res) => {
   // Set CORS headers
@@ -102,34 +97,13 @@ module.exports = async (req, res) => {
       `
     });
 
-    // 3. Push to GitHub (create/update a file with signup data)
-    try {
-      const fileName = `beta-signups/${timestamp.replace(/[:.]/g, '-')}-${email.replace(/[@.]/g, '-')}.json`;
-      
-      await octokit.repos.createOrUpdateFileContents({
-        owner: 'coloredsavage',
-        repo: 'resumegod-landing',
-        path: fileName,
-        message: `Add beta signup: ${email}`,
-        content: Buffer.from(JSON.stringify(signupData, null, 2)).toString('base64'),
-        committer: {
-          name: 'ResumeGod Bot',
-          email: 'bot@resumegod.ai'
-        }
-      });
-    } catch (githubError) {
-      console.error('GitHub push error:', githubError);
-      // Don't fail the entire request if GitHub push fails
-    }
-
     // Return success response
     return res.status(200).json({
       success: true,
       message: 'Successfully signed up for beta!',
       data: {
         supabase_id: supabaseData[0]?.id,
-        email_sent: !!emailResult.data?.id,
-        github_updated: true
+        email_sent: !!emailResult.data?.id
       }
     });
 
