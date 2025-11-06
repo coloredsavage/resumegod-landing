@@ -1,0 +1,258 @@
+/* Mobile-specific responsive adjustments */
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 100px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .prompt-grid,
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .btn-beta.large {
+        width: 100%;
+        max-width: 170px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .footer-light {
+        width: 180px;
+    }
+    
+    /* Additional mobile optimizations */
+    .container {
+        padding: 0 20px;
+    }
+    
+    .hero-title {
+        font-size: clamp(32px, 12vw, 40px);
+        line-height: 1.1;
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(14px, 4vw, 16px);
+        line-height: 1.5;
+    }
+    
+    .section-title {
+        font-size: clamp(28px, 8vw, 36px);
+    }
+    
+    .features-title {
+        font-size: clamp(28px, 8vw, 36px);
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .feature-grid {
+        gap: 40px;
+    }
+    
+    .feature-card {
+        text-align: center;
+    }
+    
+    .prompt-grid {
+        gap: 12px;
+    }
+    
+    .footer {
+        padding: 80px 0 40px;
+    }
+    
+    /* Electric button mobile fixes */
+    .electric-button-container {
+        margin: 20px auto;
+        transform: scale(0.9);
+    }
+    
+    .electric-main-button {
+        width: 200px;
+        height: 60px;
+    }
+    
+    .electric-button-text {
+        font-size: 16px;
+    }
+    
+    /* Ensure electric effects work on mobile */
+    .electric-border-distort {
+        filter: url(#turbulent-displace);
+    }
+    
+    .electric-main-button::before,
+    .electric-main-button::after {
+        animation-play-state: running;
+    }
+    
+    .electric-glow-layer-1,
+    .electric-glow-layer-2,
+    .electric-overlay-1,
+    .electric-overlay-2,
+    .electric-background-glow {
+        opacity: 0.8; /* Increase opacity for better visibility on mobile */
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 120px 0 120px;
+    }
+    
+    .hero-content {
+        margin-top: 0px;
+    }
+    
+    .hero-title {
+        font-size: clamp(28px, 10vw, 36px);
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(13px, 3.5vw, 15px);
+    }
+    
+    .section-title {
+        font-size: clamp(24px, 7vw, 32px);
+    }
+    
+    .features-title {
+        font-size: clamp(24px, 7vw, 32px);
+    }
+    
+    .btn-beta {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+    
+    .btn-beta.large {
+        padding: 14px 28px;
+        font-size: 15px;
+    }
+    
+    .btn-beta.glow {
+        padding: 16px 32px;
+        font-size: 1rem;
+    }
+    
+    .footer-light {
+        width: 150px;
+    }
+    
+    .copyright {
+        margin-top: 30px;
+        font-size: 12px;
+    }
+    
+    /* Electric button mobile fixes for smaller screens */
+    .electric-button-container {
+        transform: scale(0.85);
+    }
+    
+    .electric-main-button {
+        width: 180px;
+        height: 55px;
+    }
+    
+    .electric-button-text {
+        font-size: 15px;
+    }
+    
+    .electric-glow-layer-1,
+    .electric-glow-layer-2,
+    .electric-overlay-1,
+    .electric-overlay-2,
+    .electric-background-glow {
+        opacity: 0.9; /* Further increase opacity for smaller screens */
+    }
+}
+
+@media (max-width: 375px) {
+    .hero {
+        padding: 100px 0 50px;
+    }
+    
+    .hero-content {
+        margin-top: -150px;
+    }
+    
+    .hero-title {
+        font-size: clamp(24px, 9vw, 32px);
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(12px, 3vw, 14px);
+    }
+    
+    .section-title {
+        font-size: clamp(20px, 6vw, 28px);
+    }
+    
+    .features-title {
+        font-size: clamp(20px, 6vw, 28px);
+    }
+    
+    .btn-beta {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+    
+    .btn-beta.large {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+    
+    .btn-beta.glow {
+        padding: 14px 28px;
+        font-size: 0.9rem;
+    }
+    
+    .footer-light {
+        width: 120px;
+    }
+    
+    .copyright {
+        margin-top: 20px;
+        font-size: 11px;
+    }
+    
+    .prompt-card {
+        padding: 12px;
+        font-size: 12px;
+    }
+    
+    .feature-card h3 {
+        font-size: 15px;
+    }
+    
+    .feature-card p {
+        font-size: 12px;
+    }
+    
+    /* Electric button mobile fixes for smallest screens */
+    .electric-button-container {
+        transform: scale(0.8);
+    }
+    
+    .electric-main-button {
+        width: 160px;
+        height: 50px;
+    }
+    
+    .electric-button-text {
+        font-size: 14px;
+    }
+    
+    .electric-glow-layer-1,
+    .electric-glow-layer-2,
+    .electric-overlay-1,
+    .electric-overlay-2,
+    .electric-background-glow {
+        opacity: 1; /* Maximum opacity for smallest screens */
+    }
+}

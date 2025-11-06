@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resumegod - Apply to jobs at the speed of light</title>
+    <link rel="icon" type="image/png" href="images/fav.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">resumegod.</div>
+                <button class="btn-beta" onclick="handleBetaClick()">Join the Beta</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Apply to jobs<br>
+                    at the speed of light.
+                </h1>
+                <p class="hero-subtitle">
+                    Built for people who want to spend less time rewriting their resumes and more time interviewing. Your resume. Your voice. One tool that makes it work for you.
+                </p>
+                <!-- Single beta button that works on both mobile and desktop -->
+                <button class="btn-beta large" onclick="handleBetaClick()">Join the Beta</button>
+            </div>
+            <!-- Light streak image -->
+            <img src="images/light.png" alt="Light streaks" class="hero-light">
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="prompts">
+        <div class="container">
+            <h2 class="section-title">See ResumeGod in Action</h2>
+            <p class="section-subtitle">
+                Watch how ResumeGod transforms your resume with AI-powered optimization. See real-time ATS scoring, keyword matching, and personalized recommendations that help you land more interviews.
+            </p>
+            <button class="btn-beta" onclick="handleBetaClick()">Join the Beta</button>
+
+            <!-- Vimeo Embed -->
+            <div class="vimeo-placeholder">
+                <div class="vimeo-container">
+                    <div style="padding:67.84% 0 0 0;position:relative;">
+                        <iframe src="https://player.vimeo.com/video/1132474988?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Resumegod Landing Page"></iframe>
+                    </div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="features-title">
+                <span class="text-gray">More features</span>
+                <span class="brand-text">resumegod</span>
+                <span class="text-gray">offers to an individual</span>
+            </h2>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <h3>Lightning-Fast Optimization</h3>
+                    <p>Get AI-powered resume optimization in seconds, not hours. Our platform analyzes and improves your resume at the speed of light.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14,2 14,8 20,8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10,9 9,9 8,9"/>
+                        </svg>
+                    </div>
+                    <h3>Job Description Matching</h3>
+                    <p>Upload any job description and instantly see how well your resume matches. Get specific recommendations to improve your fit.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21,15 16,10 5,21"/>
+                        </svg>
+                    </div>
+                    <h3>Keyword Enhancement</h3>
+                    <p>Identify missing keywords and skills from job descriptions. Get AI-powered suggestions to strengthen your resume content instantly.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16,18 22,12 16,6"/>
+                            <polyline points="8,6 2,12 8,18"/>
+                        </svg>
+                    </div>
+                    <h3>Instant Format Conversion</h3>
+                    <p>Convert your resume between different formats while maintaining perfect formatting. Export optimized versions in seconds.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        </svg>
+                    </div>
+                    <h3>Real-Time ATS Scoring</h3>
+                    <p>Get instant Applicant Tracking System compatibility scores. See exactly how your resume performs against automated screening systems.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <circle cx="12" cy="5" r="2"/>
+                            <path d="M12 7v4"/>
+                        </svg>
+                    </div>
+                    <h3>Speed-Focused Analytics</h3>
+                    <p>Track your optimization progress with real-time analytics. See immediate improvements in readability and impact scores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <svg class="svg-container">
+            <defs>
+                <filter id="turbulent-displace" colorInterpolationFilters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+                    <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise1" seed="1" />
+                    <feOffset in="noise1" dx="0" dy="0" result="offsetNoise1">
+                        <animate attributeName="dy" values="700; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
+                    </feOffset>
+                    <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise2" seed="1" />
+                    <feOffset in="noise2" dx="0" dy="0" result="offsetNoise2">
+                        <animate attributeName="dy" values="0; -700" dur="6s" repeatCount="indefinite" calcMode="linear" />
+                    </feOffset>
+                    <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise1" seed="2" />
+                    <feOffset in="noise1" dx="0" dy="0" result="offsetNoise3">
+                        <animate attributeName="dx" values="490; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
+                    </feOffset>
+                    <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise2" seed="2" />
+                    <feOffset in="noise2" dx="0" dy="0" result="offsetNoise4">
+                        <animate attributeName="dx" values="0; -490" dur="6s" repeatCount="indefinite" calcMode="linear" />
+                    </feOffset>
+                    <feComposite in="offsetNoise1" in2="offsetNoise2" result="part1" />
+                    <feComposite in="offsetNoise3" in2="offsetNoise4" result="part2" />
+                    <feBlend in="part1" in2="part2" mode="color-dodge" result="combinedNoise" />
+                    <feDisplacementMap in="SourceGraphic" in2="combinedNoise" scale="15" xChannelSelector="R" yChannelSelector="B" />
+                </filter>
+            </defs>
+        </svg>
+
+        <div class="electric-button-container" onclick="handleBetaClick()">
+            <div class="electric-inner-container">
+                <div class="electric-border-outer">
+                    <div class="electric-main-button">
+                        <div class="electric-border-distort"></div>
+                        <span class="electric-button-text">Join the Beta</span>
+                    </div>
+                </div>
+                <div class="electric-glow-layer-1"></div>
+                <div class="electric-glow-layer-2"></div>
+            </div>
+            <div class="electric-overlay-1"></div>
+            <div class="electric-overlay-2"></div>
+            <div class="electric-background-glow"></div>
+        </div>
+        <p class="copyright">© 2025 — resumegod.ai</p>
+    </footer>
+
+    <!-- Beta Signup Modal -->
+    <div id="betaModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close" onclick="closeBetaModal()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-header-content">
+                    <h2 class="modal-title">Sign up for Beta</h2>
+                    <p class="modal-subtitle">Get early access to AI-powered resume optimization.</p>
+                </div>
+                
+                <form id="betaForm" class="beta-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input id="name" name="name" type="text" placeholder="Anakin Skywalker">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input id="email" name="email" type="email" placeholder="vader@resumegod.ai" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Sign up for Beta</button>
+                    <div id="formMessage" class="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleBetaClick() {
+            openBetaModal();
+        }
+
+        function openBetaModal() {
+            const modal = document.getElementById('betaModal');
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBetaModal() {
+            const modal = document.getElementById('betaModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.addEventListener('click', function(event) {
+            const modal = document.getElementById('betaModal');
+            if (event.target === modal) {
+                closeBetaModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeBetaModal();
+            }
+        });
+
+        // Form submission handling
+        document.getElementById('betaForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const submitBtn = form.querySelector('.submit-btn');
+            const messageDiv = document.getElementById('formMessage');
+            
+            // Get form data
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get('name') || 'Not provided',
+                email: formData.get('email')
+            };
+
+            // Validate email
+            if (!data.email) {
+                showMessage('Please enter your email address.', 'error');
+                return;
+            }
+
+            // Validate email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(data.email)) {
+                showMessage('Please enter a valid email address.', 'error');
+                return;
+            }
+
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Joining...';
+            messageDiv.innerHTML = '';
+
+            try {
+                // Submit to our API endpoint
+                const response = await fetch('/api/signup', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    showMessage('Success! You have been added to the beta waitlist. Check your email for confirmation.', 'success');
+                    form.reset();
+                    setTimeout(() => {
+                        closeBetaModal();
+                    }, 3000);
+                } else {
+                    throw new Error(result.error || 'Failed to sign up');
+                }
+                
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                showMessage('Sorry, there was an error processing your signup. Please try again.', 'error');
+            } finally {
+                // Reset button state
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Sign up for Beta';
+            }
+        });
+
+        function showMessage(message, type) {
+            const messageDiv = document.getElementById('formMessage');
+            messageDiv.textContent = message;
+            messageDiv.className = `form-message ${type}`;
+            messageDiv.style.display = 'block';
+        }
+
+        // Alternative: Simple email collection (fallback)
+        function submitToEmail(data) {
+            // This is a simple fallback that just logs the data
+            // In production, you'd want to implement a proper backend
+            console.log('Form data:', data);
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve({ success: true });
+                }, 1000);
+            });
+        }
+    </script>
+
+    <script src="js/animation.js"></script>
+</body>
+</html>
