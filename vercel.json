@@ -46,6 +46,26 @@
       "methods": ["POST", "OPTIONS"]
     },
     {
+      "src": "/css/(.*)",
+      "dest": "/css/$1"
+    },
+    {
+      "src": "/js/(.*)",
+      "dest": "/js/$1"
+    },
+    {
+      "src": "/images/(.*)",
+      "dest": "/images/$1"
+    },
+    {
+      "src": "/font/(.*)",
+      "dest": "/font/$1"
+    },
+    {
+      "src": "/font2/(.*)",
+      "dest": "/font2/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
