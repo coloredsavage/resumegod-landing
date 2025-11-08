@@ -24,7 +24,7 @@ CREATE POLICY "Allow insert for API" ON beta_signups
 -- Create policy to allow select operations (for viewing data)
 CREATE POLICY "Allow select for authenticated users" ON beta_signups
   FOR SELECT
-  USING (auth.role() = 'authenticated');
+  USING (true);
 
 -- Create email_replies table for inbound email processing
 CREATE TABLE IF NOT EXISTS email_replies (
